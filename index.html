@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberTech - Honor X9D | Futuristic Phone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Asosiy Cyberpunk stillari */
+        
+         :root {
+            --samsung-blue: #1428a0;
+            --iphone-silver: #f5f5f7;
+            --honor-purple: #8a2be2;
+            --honor-gold: #FFD700;
+            --cyber-green: #00ff9d;
+            --dark-bg: #0a0a0f;
+            --darker-bg: #050508;
+            --grid-color: rgba(138, 43, 226, 0.1);
+            --text-glow: 0 0 10px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', 'Orbitron', monospace;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: #fff;
+            overflow-x: hidden;
+            background-image: linear-gradient(var(--grid-color) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+            min-height: 100vh;
+        }
+        /* ... (oldingi CSS kodlar o'zgarishsiz qoladi) ... */
+        /* Honor uchun maxsus bo'lim */
+        
+        .honor-spotlight {
+            margin: 80px 0;
+            padding: 50px;
+            border: 3px solid var(--honor-purple);
+            border-radius: 20px;
+            background: linear-gradient(45deg, rgba(138, 43, 226, 0.1), rgba(255, 215, 0, 0.05));
+            box-shadow: 0 0 50px rgba(138, 43, 226, 0.3);
+        }
+        
+        .honor-spotlight-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .honor-badge {
+            background: linear-gradient(45deg, var(--honor-purple), var(--honor-gold));
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: badge-pulse 2s infinite;
+        }
+        
+        @keyframes badge-pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        .honor-main-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .honor-feature {
+            text-align: center;
+            padding: 20px;
+            background: rgba(138, 43, 226, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+        
+        .honor-feature i {
+            font-size: 2.5rem;
+            color: var(--honor-gold);
+            margin-bottom: 15px;
+        }
+        
+        .honor-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .honor-detail-box {
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 5px solid var(--honor-purple);
+            border-radius: 10px;
+        }
+        /* Hero bo'limi o'zgartirish */
+        
+        .hero-title {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--honor-purple), var(--honor-gold), #ff00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #aaa;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        /* Honor telefonini birinchiga olib chiqish */
+        
+        .phone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        /* Honor karta birinchi bo'lishi uchun */
+        
+        .phone-grid .honor-border {
+            order: -1;
+        }
+        /* Honor telefoniga maxsus hover effekti */
+        
+        .honor-border:hover::before {
+            animation: honor-glow 1s linear infinite;
+        }
+        
+        @keyframes honor-glow {
+            0%,
+            100% {
+                opacity: 0.8;
+                box-shadow: 0 0 20px var(--honor-purple);
+            }
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 40px var(--honor-purple), 0 0 60px var(--honor-gold);
+            }
+        }
+        /* ... (qolgan CSS o'zgarishsiz) ... */
+    </style>
+</head>
+
+<body>
+    <!-- Scan-line effekti -->
+    <div class="scan-line"></div>
+
+    <!-- Header -->
+    <header class="cyber-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="logo-text">CyberTech | Honor X9D</div>
+                </div>
+
+                <nav class="cyber-nav">
+                    <ul>
+                        <li><a href="#home">Bosh Sahifa</a></li>
+                        <li><a href="#honor">Honor X9D</a></li>
+                        <li><a href="#phones">Telefonlar</a></li>
+                        <li><a href="#specs">Texnik Ko'rsatkichlar</a></li>
+                        <li><a href="#contact">Aloqa</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="cyber-hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <h1 class="hero-title">HONOR X9D - KELAJAK BUGUN</h1>
+            <p class="hero-subtitle">
+                Snapdragon 8+ Gen 2, 100W tez zaryadlovchi, 120Hz AMOLED ekran - Honor X9D barchani hayratda qoldiradigan ishlash va dizaynga ega. Cyberpunk dizaynida noyob tajriba.
+            </p>
+            <div class="neon-border honor-border" style="display: inline-block; padding: 15px 30px;">
+                <a href="#honor" style="color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem;">
+                    HONOR X9D TAFSILOTLARI <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honor X9D Maxsus Bo'limi -->
+    <section class="container" id="honor">
+        <div class="honor-spotlight">
+            <div class="honor-spotlight-header">
+                <h2 class="showcase-title" style="text-align: left; margin-bottom: 0;">HONOR X9D - AFZALLIKLARI</h2>
+                <div class="honor-badge">
+                    <i class="fas fa-star"></i> 2024 YILNING ENG YAXSHI TELEFONI
+                </div>
+            </div>
+
+            <p style="font-size: 1.2rem; margin-bottom: 30px; color: #ddd;">
+                Honor X9D - yuqori samaradorlik va arzon narxning mukammal uyg'unligi. 100W tez zaryadlash texnologiyasi orqali telefon 25 daqiqada to'liq zaryadlanadi.
+            </p>
+
+            <div class="honor-main-features">
+                <div class="honor-feature">
+                    <i class="fas fa-bolt"></i>
+                    <h3>100W Tez Zaryad</h3>
+                    <p>25 daqiqada 100% zaryad</p>
+                </div>
+                <div class="honor-feature">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Snapdragon 8+ Gen 2</h3>
+                    <p>Yuqori ishlash chiplari</p>
+                </div>
+                <div class="honor-feature">
+                    <i class="fas fa-eye"></i>
+                    <h3>120Hz AMOLED</h3>
+                    <p>Silliq va yorqin ekran</p>
+                </div>
+                <div class="honor-feature">
+                    <i class="fas fa-camera"></i>
+                    <h3>108MP Kamera</h3>
+                    <p>Professional suratlar</p>
+                </div>
+            </div>
+
+            <div class="honor-details-grid">
+                <div class="honor-detail-box">
+                    <h3><i class="fas fa-tachometer-alt"></i> Ishlash</h3>
+                    <p>Snapdragon 8+ Gen 2 protsessori 12GB RAM bilan birgalikda har qanday vazifani bajarish uchun yetarli kuchga ega. AnTuTu testida 1.2 million ball to'pladi.</p>
+                </div>
+                <div class="honor-detail-box">
+                    <h3><i class="fas fa-battery-full"></i> Batareya</h3>
+                    <p>4800mAh batareya bir zaryadda 48 soatgacha ishlash imkonini beradi. 100W Honor SuperCharge texnologiyasi batareyani 25 daqiqada to'ldiradi.</p>
+                </div>
+                <div class="honor-detail-box">
+                    <h3><i class="fas fa-camera"></i> Kamera Tizimi</h3>
+                    <p>108MP asosiy kamera, 8MP ultrakeng burchakli kamera va 2MP makro kameradan iborat tizim. Kecha rejimi va AI yordamida mukammal suratlar oling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phone Showcase (Honor birinchi bo'lishi uchun) -->
+    <section class="container" id="phones">
+        <div class="phone-showcase">
+            <h2 class="showcase-title">TAQQOSLASH: HONOR X9D VA RIVOLLARI</h2>
+
+            <div class="phone-grid">
+                <!-- Honor X9D (birinchi o'rinda) -->
+                <div class="neon-border honor-border phone-card">
+                    <div class="phone-image honor-phone">
+                        <div class="phone-screen honor-screen">
+                            <div class="phone-name honor-name">HONOR X9D PRO</div>
+                            <ul class="phone-specs honor-specs">
+                                <li>Snapdragon 8+ Gen 2</li>
+                                <li>12GB RAM / 512GB</li>
+                                <li>6.78" AMOLED 120Hz</li>
+                                <li>108MP + 8MP + 2MP</li>
+                                <li>4800mAh / 100W</li>
+                                <li>Magic UI 8.0</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 class="honor-name">Honor X9D (2024)</h3>
+                    <div class="phone-price honor-price">$699</div>
+                    <div style="margin-top: 10px; color: var(--honor-gold);">
+                        <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Samsung S25 Ultra -->
+                <div class="neon-border samsung-border phone-card">
+                    <div class="phone-image samsung-phone">
+                        <div class="phone-screen samsung-screen">
+                            <div class="phone-name samsung-name">SAMSUNG S25 ULTRA</div>
+                            <ul class="phone-specs samsung-specs">
+                                <li>Snapdragon 8 Gen 3</li>
+                                <li>16GB RAM / 1TB</li>
+                                <li>6.8" Dynamic AMOLED 2X</li>
+                                <li>200MP + 50MP + 12MP + 10MP</li>
+                                <li>5000mAh / 45W</li>
+                                <li>S-Pen qo'llab-quvvatlash</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 class="samsung-name">Samsung Galaxy S25 Ultra</h3>
+                    <div class="phone-price samsung-price">$1,299</div>
+                </div>
+
+                <!-- iPhone 17 Pro Max -->
+                <div class="neon-border iphone-border phone-card">
+                    <div class="phone-image iphone-phone">
+                        <div class="phone-screen iphone-screen">
+                            <div class="phone-name iphone-name">iPhone 17 Pro Max</div>
+                            <ul class="phone-specs iphone-specs">
+                                <li>Apple A18 Pro chipset</li>
+                                <li>8GB RAM / 1TB</li>
+                                <li>6.9" Super Retina XDR</li>
+                                <li>48MP + 12MP + 12MP + LiDAR</li>
+                                <li>4852mAh / 30W</li>
+                                <li>Titanium korpus</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3 class="iphone-name">iPhone 17 Pro Max</h3>
+                    <div class="phone-price iphone-price">$1,599</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="container">
+        <div class="neon-border data-panel" style="border-color: var(--honor-purple);">
+            <h2 class="showcase-title">HONOR X9D STATISTIKASI</h2>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" style="color: var(--honor-gold);">100W</div>
+                    <div class="stat-label">Tez Zaryadlash</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-value" style="color: var(--honor-gold);">1.2M</div>
+                    <div class="stat-label">AnTuTu Ball</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-value" style="color: var(--honor-gold);">25min</div>
+                    <div class="stat-label">To'liq zaryad</div>
+                </div>
+
+                <div class="stat-item">
+                    <div class="stat-value" style="color: var(--honor-gold);">48h</div>
+                    <div class="stat-label">Ishlash vaqti</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cyber-footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Honor X9D Store</h3>
+                    <p>Honor X9D - kelajak texnologiyalari va arzon narxning mukammal uyg'unligi. Cyberpunk dizaynida noyob telefon tajribasi.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Honor X9D Tafsilotlar</h3>
+                    <ul class="footer-links">
+                        <li><a href="#honor">Xususiyatlar</a></li>
+                        <li><a href="#phones">Taqqoslash</a></li>
+                        <li><a href="#specs">Texnik Ko'rsatkichlar</a></li>
+                        <li><a href="#contact">Sotib olish</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Honor X9D Buyurtma</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-shopping-cart"></i> Onlayn buyurtma</li>
+                        <li><i class="fas fa-truck"></i> Bepul yetkazib berish</li>
+                        <li><i class="fas fa-warranty"></i> 24 oy kafolat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-icon" style="background: rgba(138, 43, 226, 0.2);"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="social-icon" style="background: rgba(138, 43, 226, 0.2);"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" style="background: rgba(138, 43, 226, 0.2);"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon" style="background: rgba(138, 43, 226, 0.2);"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2024 CyberTech | Honor X9D. Barcha huquqlar himoyalangan. Honor X9D - Honor Technologies kompaniyasining mahsulotidir.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Interaktiv effektlar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Honor elementlariga maxsus effekt
+            const honorElements = document.querySelectorAll('.honor-border, .honor-feature, .honor-detail-box');
+
+            honorElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 25px rgba(138, 43, 226, 0.3)';
+                });
+
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+
+            // Honor X9D ga maxsus bosish effekti
+            const honorCard = document.querySelector('.phone-grid .honor-border');
+            if (honorCard) {
+                honorCard.addEventListener('click', function() {
+                    // Honor X9D maxsus bo'limiga scroll qilish
+                    window.scrollTo({
+                        top: document.querySelector('#honor').offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+
+                    // Maxsus animatsiya
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 300);
+                });
+            }
+
+            // Header rangini Honor ranglariga o'zgartirish
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                const header = document.querySelector('.cyber-header');
+
+                if (scrollY > 100) {
+                    header.style.background = 'rgba(10, 10, 15, 0.95)';
+                    header.style.boxShadow = '0 5px 20px rgba(138, 43, 226, 0.3)';
+                } else {
+                    header.style.background = 'linear-gradient(to bottom, rgba(10, 10, 15, 0.95), transparent)';
+                    header.style.boxShadow = 'none';
+                }
+            });
+
+            // Honor badge animatsiyasi
+            const honorBadge = document.querySelector('.honor-badge');
+            if (honorBadge) {
+                setInterval(() => {
+                    honorBadge.style.background = `linear-gradient(45deg, var(--honor-purple), var(--honor-gold))`;
+                    setTimeout(() => {
+                        honorBadge.style.background = `linear-gradient(45deg, var(--honor-gold), var(--honor-purple))`;
+                    }, 1000);
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+
+</html>
